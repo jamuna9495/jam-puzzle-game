@@ -1,0 +1,76 @@
+:root {
+    --neon-blue: #00f3ff;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: radial-gradient(circle at center, #1a1a2e, #0f0f1a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.neon-text {
+    text-shadow: 0 0 10px var(--neon-blue);
+    letter-spacing: 5px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 12px;
+    margin: 20px 0;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--neon-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.tile:hover {
+    background: var(--neon-blue);
+    color: black;
+    transform: scale(1.05);
+}
+
+.empty { opacity: 0; cursor: default; }
+
+.glow-btn {
+    background: transparent;
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--neon-blue);
+    transition: 0.3s;
+}
+
+.glow-btn:hover {
+    background: var(--neon-blue);
+    color: #000;
+}
